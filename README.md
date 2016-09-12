@@ -12,4 +12,4 @@ Set the working directory in R, such that the directory "UCI HAR Dataset" is in 
 Then source the code
 source("run_analysis.R")
 
-And the results would be available in the "result" variable
+After the script is loaded to completion, the result of the tidy data set would be available in the "result" object
