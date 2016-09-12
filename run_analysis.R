@@ -1,3 +1,10 @@
+## Download zip file
+url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+currWd <- getwd()
+tempFile <- paste0(currWd,'/file.zip')
+download.file(url, destfile = tempFile, method="curl")
+unzip(tempFile)
+
 ## Read data for test set
 testX <- read.table("UCI HAR Dataset/test/X_test.txt")
 testY <- read.table("UCI HAR Dataset/test/y_test.txt")
