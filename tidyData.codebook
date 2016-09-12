@@ -1,0 +1,35 @@
+After sourcing the R script 
+source("run_analysis.R"),
+
+you can access the 'result' object, that has 180 rows and 68 columns
+30 subject IDs x 6 activity states = 180 rows; 
+33 mean() column labels + 33 std() column labels + activityName + subjectID = 68 columns.
+
+> colnames(result)
+
+"subjectId"               
+      The ID of the 30 subjects for whom we have analyzed the raw data, and come up with a tidy data set
+
+"activityName"            
+      Will have values from one of the six activities listed out : WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
+
+The remaining 33 mean() column labels + 33 std () column labels
+The names were normalized, so they are valid column labels, while all other information pertaining to the axis X, Y, Z and the function "std", and "mean" have been retained in the label names
+
+      "tBodyAcc.std.X"            "tBodyAcc.std.Y"           
+      "tBodyAcc.std.Z"            "tGravityAcc.std.X"         "tGravityAcc.std.Y"         "tGravityAcc.std.Z"        
+      "tBodyAccJerk.std.X"        "tBodyAccJerk.std.Y"        "tBodyAccJerk.std.Z"        "tBodyGyro.std.X"          
+      "tBodyGyro.std.Y"           "tBodyGyro.std.Z"           "tBodyGyroJerk.std.X"       "tBodyGyroJerk.std.Y"      
+      "tBodyGyroJerk.std.Z"       "tBodyAccMag.std"           "tGravityAccMag.std"        "tBodyAccJerkMag.std"      
+      "tBodyGyroMag.std"          "tBodyGyroJerkMag.std"      "fBodyAcc.std.X"            "fBodyAcc.std.Y"           
+      "fBodyAcc.std.Z"            "fBodyAccJerk.std.X"        "fBodyAccJerk.std.Y"        "fBodyAccJerk.std.Z"       
+      "fBodyGyro.std.X"           "fBodyGyro.std.Y"           "fBodyGyro.std.Z"           "fBodyAccMag.std"          
+      "fBodyBodyAccJerkMag.std"   "fBodyBodyGyroMag.std"      "fBodyBodyGyroJerkMag.std"  "tBodyAcc.mean.X"          
+      "tBodyAcc.mean.Y"           "tBodyAcc.mean.Z"           "tGravityAcc.mean.X"        "tGravityAcc.mean.Y"       
+      "tGravityAcc.mean.Z"        "tBodyAccJerk.mean.X"       "tBodyAccJerk.mean.Y"       "tBodyAccJerk.mean.Z"      
+      "tBodyGyro.mean.X"          "tBodyGyro.mean.Y"          "tBodyGyro.mean.Z"          "tBodyGyroJerk.mean.X"     
+      "tBodyGyroJerk.mean.Y"      "tBodyGyroJerk.mean.Z"      "tBodyAccMag.mean"          "tGravityAccMag.mean"      
+      "tBodyAccJerkMag.mean"      "tBodyGyroMag.mean"         "tBodyGyroJerkMag.mean"     "fBodyAcc.mean.X"          
+      "fBodyAcc.mean.Y"           "fBodyAcc.mean.Z"           "fBodyAccJerk.mean.X"       "fBodyAccJerk.mean.Y"      
+      "fBodyAccJerk.mean.Z"       "fBodyGyro.mean.X"          "fBodyGyro.mean.Y"          "fBodyGyro.mean.Z"         
+      "fBodyAccMag.mean"          "fBodyBodyAccJerkMag.mean"  "fBodyBodyGyroMag.mean"     "fBodyBodyGyroJerkMag.mean"
